@@ -29,102 +29,120 @@
         private void InitializeComponent()
         {
             this.LbValor = new System.Windows.Forms.Label();
-            this.InserirValor = new System.Windows.Forms.NumericUpDown();
+            this.NumInserirValor = new System.Windows.Forms.NumericUpDown();
             this.BtDepositar = new System.Windows.Forms.Button();
             this.BtSacar = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)(this.InserirValor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            this.LbSaldo = new System.Windows.Forms.Label();
+            this.LbSaldodisponivel = new System.Windows.Forms.Label();
+            this.LbLimite = new System.Windows.Forms.Label();
+            this.NumLimite = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.NumInserirValor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumLimite)).BeginInit();
             this.SuspendLayout();
             // 
             // LbValor
             // 
             this.LbValor.AutoSize = true;
+            this.LbValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbValor.Location = new System.Drawing.Point(138, 64);
             this.LbValor.Name = "LbValor";
-            this.LbValor.Size = new System.Drawing.Size(46, 13);
+            this.LbValor.Size = new System.Drawing.Size(114, 31);
             this.LbValor.TabIndex = 0;
             this.LbValor.Text = "VALOR:";
             // 
-            // InserirValor
+            // NumInserirValor
             // 
-            this.InserirValor.Location = new System.Drawing.Point(190, 62);
-            this.InserirValor.Name = "InserirValor";
-            this.InserirValor.Size = new System.Drawing.Size(120, 20);
-            this.InserirValor.TabIndex = 1;
+            this.NumInserirValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NumInserirValor.Location = new System.Drawing.Point(245, 62);
+            this.NumInserirValor.Maximum = new decimal(new int[] {
+            -1304428544,
+            434162106,
+            542,
+            0});
+            this.NumInserirValor.Name = "NumInserirValor";
+            this.NumInserirValor.Size = new System.Drawing.Size(120, 38);
+            this.NumInserirValor.TabIndex = 1;
+            this.NumInserirValor.ValueChanged += new System.EventHandler(this.NumInserirValor_ValueChanged);
             // 
             // BtDepositar
             // 
-            this.BtDepositar.Location = new System.Drawing.Point(166, 112);
+            this.BtDepositar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtDepositar.Location = new System.Drawing.Point(86, 112);
             this.BtDepositar.Name = "BtDepositar";
-            this.BtDepositar.Size = new System.Drawing.Size(108, 23);
+            this.BtDepositar.Size = new System.Drawing.Size(188, 36);
             this.BtDepositar.TabIndex = 2;
             this.BtDepositar.Text = "DEPOSITAR";
             this.BtDepositar.UseVisualStyleBackColor = true;
+            this.BtDepositar.Click += new System.EventHandler(this.BtDepositar_Click);
             // 
             // BtSacar
             // 
+            this.BtSacar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtSacar.Location = new System.Drawing.Point(280, 112);
             this.BtSacar.Name = "BtSacar";
-            this.BtSacar.Size = new System.Drawing.Size(109, 23);
+            this.BtSacar.Size = new System.Drawing.Size(170, 36);
             this.BtSacar.TabIndex = 3;
             this.BtSacar.Text = "SACAR";
             this.BtSacar.UseVisualStyleBackColor = true;
+            this.BtSacar.Click += new System.EventHandler(this.BtSacar_Click);
             // 
-            // label2
+            // LbSaldo
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(190, 163);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "label2";
+            this.LbSaldo.AutoSize = true;
+            this.LbSaldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbSaldo.Location = new System.Drawing.Point(138, 163);
+            this.LbSaldo.Name = "LbSaldo";
+            this.LbSaldo.Size = new System.Drawing.Size(114, 31);
+            this.LbSaldo.TabIndex = 4;
+            this.LbSaldo.Text = "SALDO:";
             // 
-            // label3
+            // LbSaldodisponivel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(239, 163);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "label3";
+            this.LbSaldodisponivel.AutoSize = true;
+            this.LbSaldodisponivel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbSaldodisponivel.Location = new System.Drawing.Point(248, 163);
+            this.LbSaldodisponivel.Name = "LbSaldodisponivel";
+            this.LbSaldodisponivel.Size = new System.Drawing.Size(57, 31);
+            this.LbSaldodisponivel.TabIndex = 6;
+            this.LbSaldodisponivel.Text = "R$:";
+            this.LbSaldodisponivel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LbSaldodisponivel.Click += new System.EventHandler(this.label3_Click);
             // 
-            // label4
+            // LbLimite
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(187, 187);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "label4";
+            this.LbLimite.AutoSize = true;
+            this.LbLimite.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbLimite.Location = new System.Drawing.Point(156, 244);
+            this.LbLimite.Name = "LbLimite";
+            this.LbLimite.Size = new System.Drawing.Size(110, 31);
+            this.LbLimite.TabIndex = 7;
+            this.LbLimite.Text = "LIMITE:";
             // 
-            // numericUpDown2
+            // NumLimite
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(235, 180);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown2.TabIndex = 8;
+            this.NumLimite.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NumLimite.Location = new System.Drawing.Point(264, 244);
+            this.NumLimite.Name = "NumLimite";
+            this.NumLimite.Size = new System.Drawing.Size(120, 38);
+            this.NumLimite.TabIndex = 8;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.NumLimite);
+            this.Controls.Add(this.LbLimite);
+            this.Controls.Add(this.LbSaldodisponivel);
+            this.Controls.Add(this.LbSaldo);
             this.Controls.Add(this.BtSacar);
             this.Controls.Add(this.BtDepositar);
-            this.Controls.Add(this.InserirValor);
+            this.Controls.Add(this.NumInserirValor);
             this.Controls.Add(this.LbValor);
             this.Name = "Form1";
             this.Text = "Caixa Eletrônico";
-            ((System.ComponentModel.ISupportInitialize)(this.InserirValor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumInserirValor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumLimite)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,13 +151,13 @@
         #endregion
 
         private System.Windows.Forms.Label LbValor;
-        private System.Windows.Forms.NumericUpDown InserirValor;
+        private System.Windows.Forms.NumericUpDown NumInserirValor;
         private System.Windows.Forms.Button BtDepositar;
         private System.Windows.Forms.Button BtSacar;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.Label LbSaldo;
+        private System.Windows.Forms.Label LbSaldodisponivel;
+        private System.Windows.Forms.Label LbLimite;
+        private System.Windows.Forms.NumericUpDown NumLimite;
     }
 }
 
