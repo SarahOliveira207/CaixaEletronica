@@ -40,7 +40,17 @@ namespace CaixaEletronica
             LbSaldodisponivel.Text = saldo.ToString("c");
             if (saldo < (double)NumInserirValor.Value)
                 MessageBox.Show("Saldo insuficiente");
+            else
+                MessageBox.Show("Transferência feita com sucesso!");
+            
+        }
 
+        double taxa = 0.001;
+
+        private void tmlJuros_Tick(object sender, EventArgs e)
+        {
+            saldo += saldo * taxa;
+            LbSaldodisponivel.Text = saldo.ToString("c");
         }
     }
 }
