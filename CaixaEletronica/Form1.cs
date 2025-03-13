@@ -52,5 +52,22 @@ namespace CaixaEletronica
             saldo += saldo * taxa;
             LbSaldodisponivel.Text = saldo.ToString("c");
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            LblTaxa.Text = $"* Taxa: {taxa * 100}% a.c{tmrJuros.Interval / 1000}s";
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult r = MessageBox.Show("Deseja sair da aplicação?", "Banco Taxed", MessageBoxButtons.YesNo);
+            if (r == DialogResult.No) 
+                e.Cancel = true;
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            MessageBox.Show("Tchau, pobre!");
+        }
     }
-}
+} 

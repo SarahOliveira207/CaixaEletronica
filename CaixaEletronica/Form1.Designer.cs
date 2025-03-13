@@ -37,7 +37,8 @@
             this.LbSaldodisponivel = new System.Windows.Forms.Label();
             this.LbLimite = new System.Windows.Forms.Label();
             this.NumLimite = new System.Windows.Forms.NumericUpDown();
-            this.tmlJuros = new System.Windows.Forms.Timer(this.components);
+            this.tmrJuros = new System.Windows.Forms.Timer(this.components);
+            this.LblTaxa = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.NumInserirValor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumLimite)).BeginInit();
             this.SuspendLayout();
@@ -128,17 +129,27 @@
             this.NumLimite.Size = new System.Drawing.Size(120, 38);
             this.NumLimite.TabIndex = 8;
             // 
-            // tmlJuros
+            // tmrJuros
             // 
-            this.tmlJuros.Enabled = true;
-            this.tmlJuros.Interval = 5000;
-            this.tmlJuros.Tick += new System.EventHandler(this.tmlJuros_Tick);
+            this.tmrJuros.Enabled = true;
+            this.tmrJuros.Interval = 5000;
+            this.tmrJuros.Tick += new System.EventHandler(this.tmlJuros_Tick);
+            // 
+            // LblTaxa
+            // 
+            this.LblTaxa.AutoSize = true;
+            this.LblTaxa.Location = new System.Drawing.Point(141, 327);
+            this.LblTaxa.Name = "LblTaxa";
+            this.LblTaxa.Size = new System.Drawing.Size(35, 13);
+            this.LblTaxa.TabIndex = 9;
+            this.LblTaxa.Text = "label1";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.LblTaxa);
             this.Controls.Add(this.NumLimite);
             this.Controls.Add(this.LbLimite);
             this.Controls.Add(this.LbSaldodisponivel);
@@ -149,6 +160,9 @@
             this.Controls.Add(this.LbValor);
             this.Name = "Form1";
             this.Text = "Caixa Eletrônico";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.NumInserirValor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumLimite)).EndInit();
             this.ResumeLayout(false);
@@ -166,7 +180,8 @@
         private System.Windows.Forms.Label LbSaldodisponivel;
         private System.Windows.Forms.Label LbLimite;
         private System.Windows.Forms.NumericUpDown NumLimite;
-        private System.Windows.Forms.Timer tmlJuros;
+        private System.Windows.Forms.Timer tmrJuros;
+        private System.Windows.Forms.Label LblTaxa;
     }
 }
 
